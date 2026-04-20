@@ -3,8 +3,7 @@ SpeakAgain v2.1 — Full-featured multilingual AI aphasia rehabilitation
 ======================================================================
 Samuel Oluwakoya · Lagos, Nigeria
 Contact: soluwakoyat@gmail.com · samueloluwakoyat@gmail.com
-Brevo sender domain (alerts only): Samuel@bloomgatelaw.com
-Project #6 of 10 — Neurological Rehabilitation AI Series
+Project #6 Neurological Rehabilitation AI Series
 
 v2.1 (this release):
 - Login / signup (username+password) with Google OAuth option
