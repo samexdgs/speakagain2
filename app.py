@@ -21,7 +21,7 @@ import io
 import base64
 import plotly.graph_objects as go
 import plotly.express as px
-
+from db import init_db, save_activity, load_activity
 from clinical_data import (
     APHASIA_TYPES, ASSESSMENT_TASKS, classify_aphasia,
     PHRASES_MASTER, get_phrases_for_language,
@@ -211,10 +211,9 @@ def update_streak():
 
 
 def add_activity(action: str, is_concern: bool = False):
-    st.session_state.activity_feed.insert(0, {
-        "time": datetime.now().isoformat(),
-        "action": action,
-        "concern": is_concern,
+    username = current_username()
+    if username:
+        save_activity(username, action, is_concern)
     })
     st.session_state.activity_feed = st.session_state.activity_feed[:50]
 
@@ -1098,19 +1097,27 @@ def render_family_dashboard():
         <small>{int(progress_pct*100)}% to {next_lvl['name']}</small>
         """, unsafe_allow_html=True)
 
-    st.markdown("---")
-    st.markdown("### 📻 Recent activity")
-    if not st.session_state.activity_feed:
-        st.info("No activity yet.")
-    else:
-        for item in st.session_state.activity_feed[:20]:
-            time_str = datetime.fromisoformat(item["time"]).strftime("%I:%M %p")
-            border_color = "#A32D2D" if item.get("concern") else "#2B6CB0"
-            st.markdown(f"""
-            <div class="activity-item" style="border-left-color: {border_color};">
-            {item['action']} <span class="activity-time"> · {time_str}</span>
-            </div>
-            """, unsafe_allow_html=True)
+   st.markdown("### 📻 Recent activity")
+
+if st.session_state.family_viewer:
+    patient_username = st.session_state.family_viewer["patient_username"]
+else:
+    patient_username = current_username()
+
+activity = load_activity(patient_username)
+
+if not activity:
+    st.info("No activity yet.")
+else:
+    for item in activity:
+        time_str = datetime.fromisoformat(item["time"]).strftime("%I:%M %p")
+        border_color = "#A32D2D" if item.get("concern") else "#2B6CB0"
+
+        st.markdown(f"""
+        <div class="activity-item" style="border-left-color: {border_color};">
+        {item['action']} <span class="activity-time"> · {time_str}</span>
+        </div>
+        """, unsafe_allow_html=True)
 
     st.markdown("---")
     st.markdown("### Recovered words")
@@ -1118,6 +1125,10 @@ def render_family_dashboard():
         st.markdown(" · ".join(f"**{w}**" for w in sorted(st.session_state.recovered_words)))
     else:
         st.caption("Words will appear here as they are recovered through exercises.")
+
+    import time
+time.sleep(3)
+st.rerun()
 
 
 # ==========================================================
@@ -1317,6 +1328,7 @@ def render_settings():
 # MAIN ROUTER
 # ==========================================================
 def main():
+init_db()
     lang = get_lang()
 
     with st.sidebar:
