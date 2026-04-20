@@ -5,9 +5,7 @@ Computer science graduate, foot drop patient, independent AI health researcher b
 
 **Contact:** soluwakoyat@gmail.com · samueloluwakoyat@gmail.com
 **GitHub:** github.com/samexdgs
-**Live:** speakagain.streamlit.app
-
-> *Samuel@bloomgatelaw.com is the Brevo verified sender address used for outbound alerts and daily digests only. Please use the personal addresses above for all correspondence about this project.*
+**Live:** speakagain2.streamlit.app
 
 ---
 
@@ -103,76 +101,6 @@ When a family member pastes their invite code, they see a read-only live view of
 
 **XP rewards:** exercise correct +10; no-hint correct +15; first-time word recovered +20; communication sent +2; daily streak +5; weekly streak +50; monthly streak +250; milestone +100; perfect picture match +50; sentence puzzle +50; story builder +70.
 
----
-
-## Running locally
-
-```bash
-git clone https://github.com/samexdgs/speakagain.git
-cd speakagain
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-## Deploying to Streamlit Cloud
-
-**Python version is locked at first deploy.** Do this correctly the first time:
-
-1. Push this folder to a public GitHub repo
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Click **Create app** and paste the repo URL
-4. Click **Advanced settings**
-5. Set **Python version: 3.11** (the default of 3.14 breaks some wheels)
-6. In **Secrets**, paste:
-```toml
-BREVO_API_KEY = "xkeysib-your-key-here"
-ANTHROPIC_API_KEY = "sk-ant-api03-your-key-here"
-
-# Optional: Google OAuth via Streamlit's native auth
-[auth]
-redirect_uri = "https://your-app.streamlit.app/oauth2callback"
-cookie_secret = "a-long-random-string"
-client_id = "your-google-client-id.apps.googleusercontent.com"
-client_secret = "your-google-client-secret"
-server_metadata_url = "https://accounts.google.com/.well-known/openid-configuration"
-```
-7. Click **Deploy**
-
-If you already deployed and it is stuck on Python 3.14, delete the app from the Manage app menu, then redeploy with Python 3.11 set in Advanced settings.
-
----
-
-## Brevo setup (one-time, for email alerts)
-
-1. Sign up at brevo.com (free tier: 300 emails/day)
-2. Go to **Settings → Senders, Domains & IPs**
-3. **Verify domain `bloomgatelaw.com`** by adding SPF, DKIM, and DMARC DNS records
-4. **Verify sender `Samuel@bloomgatelaw.com`** (this address is used only as the Brevo sender for outbound alerts and daily digests)
-5. **Settings → API Keys → Generate a new key** (starts with `xkeysib-`)
-6. Paste into Streamlit secrets as `BREVO_API_KEY`
-
----
-
-## Getting the Anthropic API key
-
-I cannot issue you an API key, and nobody else can either — Anthropic issues keys only to authenticated account owners. If anyone hands you a key in a chat, it is either a scam or someone leaking their own credentials, both of which get the key revoked.
-
-The real steps:
-
-1. Go to **console.anthropic.com** and sign up with your email
-2. Verify your email
-3. Click your profile (top right) → **API Keys** → **Create Key**
-4. Name it "SpeakAgain" and click **Create**
-5. Copy the key shown on screen once — it starts with `sk-ant-api03-`
-6. Add $5 of credits under Settings → Billing (this lasts months at this app's usage)
-7. Paste into Streamlit secrets as `ANTHROPIC_API_KEY`
-
-The app works without this key — it falls back to rule-based offline completion. The key just enables Claude's multilingual smart suggestions.
-
----
-
-## Architecture
-
 ```
 speakagain_v2/
 ├── app.py              # Main Streamlit router + UI
@@ -191,7 +119,7 @@ speakagain_v2/
 
 ---
 
-## The 10-app series
+## The App series
 
 1. Drop Foot Management App — fdmapp.streamlit.app (LIVE)
 2. Stroke Recovery Progress Tracker
@@ -199,11 +127,6 @@ speakagain_v2/
 4. Spasticity Severity Predictor
 5. Hand Grip Rehabilitation Planner
 6. **SpeakAgain — Aphasia Communication Aid v2.1 (THIS PROJECT)**
-7. Falls Risk Predictor
-8. Neurological Fatigue Manager
-9. Caregiver Guidance System
-10. Stroke Secondary Prevention Calculator
-
 ---
 
 ## Evidence base
