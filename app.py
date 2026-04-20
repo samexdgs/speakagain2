@@ -1308,8 +1308,7 @@ def render_settings():
         "**Samuel Oluwakoya** · Lagos, Nigeria\n\n"
         "- Contact: **soluwakoyat@gmail.com** · **samueloluwakoyat@gmail.com**\n"
         "- GitHub: github.com/samexdgs\n"
-        "- Brevo sender domain (alerts only): bloomgatelaw.com\n\n"
-        "Project #6 of 10 in the Neurological Rehabilitation AI Series.\n\n"
+        "Project #6 in the Neurological Rehabilitation AI Series.\n\n"
         "*Not a medical device. Does not replace professional speech therapy.*"
     )
 
