@@ -1,5 +1,5 @@
 """
-SpeakAgain v2.1 — Full-featured multilingual AI aphasia rehabilitation
+SpeakAgain v2.1 — Full-featured multilingual AI aphasia rehabilitationashboard
 ======================================================================
 Samuel Oluwakoya · Lagos, Nigeria
 Contact: soluwakoyat@gmail.com · samueloluwakoyat@gmail.com
@@ -1005,7 +1005,7 @@ def render_family_management():
 
                     # Email the invite
                     profile = st.session_state.profile
-                    dashboard_url = "https://speakagain.streamlit.app"
+                    dashboard_url = "https://speakagain2.streamlit.app"
                     ok, msg = send_family_invite(
                         family_email=femail.strip(),
                         family_name=fname.strip(),
