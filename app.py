@@ -2,7 +2,7 @@
 SpeakAgain — Multilingual AI Aphasia Rehabilitation Platform
 ============================================================
 Samuel Oluwakoya · Lagos, Nigeria
-Contact: soluwakoyat@gmail.com · samueloluwakoyat@gmail.com
+Contact: soluwakoyat@gmail.com
 
 Main entry point. Orchestrates authentication, state persistence, UI routing,
 and real-time family dashboard sync.
@@ -1672,8 +1672,7 @@ def render_settings():
         "SpeakAgain is a multilingual AI-powered aphasia rehabilitation tool. "
         "It provides augmentative communication, daily practice, and a family "
         "dashboard for loved ones to stay informed.\n\n"
-        "**Contact:** soluwakoyat@gmail.com · samueloluwakoyat@gmail.com\n\n"
-        "**Source code:** github.com/samexdgs\n\n"
+        "**Contact:** soluwakoyat@gmail.com"
         "*Not a medical device. Does not replace professional speech therapy.*"
     )
 
