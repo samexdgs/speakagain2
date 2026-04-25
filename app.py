@@ -1,28 +1,4 @@
-import streamlit as st
-# DEBUG — remove after Google login works
-if st.query_params.get("error"):
-    st.error(f"OAuth error: {st.query_params}")
-    st.stop()
-try:
-    _has_auth = "auth" in st.secrets
-    _auth_keys = list(st.secrets.get("auth", {}).keys()) if _has_auth else []
-    st.sidebar.caption(f"DEBUG auth section present: {_has_auth}")
-    st.sidebar.caption(f"DEBUG auth keys: {_auth_keys}")
-except Exception as e:
-    st.sidebar.caption(f"DEBUG error: {e}")
-
-    import streamlit as st
-try:
-    a = st.secrets["auth"]
-    st.sidebar.caption(f"redirect_uri: {a.get('redirect_uri')}")
-    st.sidebar.caption(f"cookie_secret length: {len(a.get('cookie_secret',''))}")
-    st.sidebar.caption(f"client_id ends with: ...{a.get('client_id','')[-30:]}")
-    st.sidebar.caption(f"client_secret starts: {a.get('client_secret','')[:7]}... len={len(a.get('client_secret',''))}")
-    st.sidebar.caption(f"server_metadata_url: {a.get('server_metadata_url')}")
-except Exception as e:
-    st.sidebar.caption(f"DEBUG: {e}")
-    
-    """
+ """
 SpeakAgain — Multilingual AI Aphasia Rehabilitation Platform
 ============================================================
 Samuel Oluwakoya · Lagos, Nigeria
