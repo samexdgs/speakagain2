@@ -10,7 +10,8 @@ try:
     st.sidebar.caption(f"DEBUG auth keys: {_auth_keys}")
 except Exception as e:
     st.sidebar.caption(f"DEBUG error: {e}")
-"""
+    
+    """
 SpeakAgain — Multilingual AI Aphasia Rehabilitation Platform
 ============================================================
 Samuel Oluwakoya · Lagos, Nigeria
