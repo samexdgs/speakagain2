@@ -3,7 +3,7 @@
 **Project #6 in the Neurological Rehabilitation AI Series by **Samuel Oluwakoya**.
 A computer science graduate, foot drop patient, and independent AI health researcher based in Lagos, Nigeria, building open-source rehabilitation tools for stroke survivors.
 
-**Contact:** soluwakoyat@gmail.com · samueloluwakoyat@gmail.com
+**Contact:** soluwakoyat@gmail.com
 **GitHub:** github.com/samexdgs
 
 ---
