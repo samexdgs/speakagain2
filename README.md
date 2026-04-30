@@ -1,11 +1,12 @@
 # 💬 SpeakAgain — Multilingual AI Aphasia Rehabilitation
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0008--2126--0254-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0008-2126-0254)
+
 
 **Project #6 in the Neurological Rehabilitation AI Series by **Samuel Oluwakoya**.
 A computer science graduate, foot drop patient, and independent AI health researcher based in Lagos, Nigeria, building open-source rehabilitation tools for stroke survivors.
-
-**Contact:** soluwakoyat@gmail.com
-**GitHub:** github.com/samexdgs
-
 ---
 
 ## What is SpeakAgain
