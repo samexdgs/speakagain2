@@ -56,3 +56,9 @@ SpeakAgain is a research and accessibility tool. It has not been validated as a 
 
 Built by **Samuel Oluwakoya Tobi** — Computer Science Graduate, Foot Drop Patient, AI Health Researcher
 Lagos, Nigeria · soluwakoyat@gmail.com  github.com/samexdgs
+
+- Email: [soluwakoyat@gmail.com](mailto:soluwakoyat@gmail.com),
+- ORCID: [0009-0008-2126-0254](https://orcid.org/0009-0008-2126-0254)
+- GitHub: [github.com/samexdgs](https://github.com/samexdgs)
+- LinkedIn: [linkedin.com/in/samueloluwakoya](https://linkedin.com/in/samueloluwakoya)
+- Portfolio: [samueloluwakoya.netlify.app](https://samueloluwakoya.netlify.app)
